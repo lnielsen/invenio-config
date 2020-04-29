@@ -23,8 +23,9 @@ env:
   - REQUIREMENTS=devel
 
 python:
-  - "2.7"
-  - "3.5"
+  - "3.6"
+  - "3.7"
+  - "3.8"
 
 matrix:
   fast_finish: true
@@ -56,5 +57,4 @@ deploy:
   distributions: "sdist bdist_wheel"
   on:
     tags: true
-    python: "2.7"
-    condition: $REQUIREMENTS = release
+  skip_existing: true
